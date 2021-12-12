@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"npx browser-sync start --server 'public' --port 8080 --files 'public'"
+    "browser-sync":"npx browser-sync start --server 'public' --port 8080 --files 'public'",
+    "watch":"npx tsc --watch",
+    "dev":"run-p watch browser-sync"
   },
   "repository": {
     "type": "git",
