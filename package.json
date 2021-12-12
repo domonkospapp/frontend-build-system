@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "browser-sync": "npx browser-sync start --server 'public' --port 8080 --files 'public'",
-    "watch": "npx tsc --watch",
+    "watch": "npx rollup --config rollup.config.js --watch",
     "dev": "run-p watch browser-sync",
-    "compile": "npx tsc",
+    "compile": "npx rollup --config rollup.config.js",
     "clean": "npx rimraf public/js/**/*",
     "build": "run-p clean compile",
     "test": "jest"
