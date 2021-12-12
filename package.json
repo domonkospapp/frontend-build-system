@@ -9,7 +9,8 @@
     "dev":"run-p watch browser-sync",
     "compile":"npx tsc",
     "clean":"npx rimraf public/js/**/*",
-    "build":"run-p clean compile"
+    "build":"run-p clean compile",
+    "test":"jest"
   },
   "repository": {
     "type": "git",
