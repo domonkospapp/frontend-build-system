@@ -6,7 +6,10 @@
   "scripts": {
     "browser-sync":"npx browser-sync start --server 'public' --port 8080 --files 'public'",
     "watch":"npx tsc --watch",
-    "dev":"run-p watch browser-sync"
+    "dev":"run-p watch browser-sync",
+    "compile":"npx tsc",
+    "clean":"npx rimraf public/js/**/*",
+    "build":"run-p clean compile"
   },
   "repository": {
     "type": "git",
