@@ -1,6 +1,8 @@
 import typescript from "@rollup/plugin-typescript"
 import alias from '@rollup/plugin-alias';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
 
 export default [
     {
@@ -22,7 +24,15 @@ export default [
                     { find: 'react/jsx-runtime', replacement: 'preact/jsx-runtime' }
                 ]
             }),
-            nodeResolve()
+            nodeResolve(),
+            serve({
+                open:true,
+                contentBase:"public",
+                historyApiFallback: true,
+                host: 'localhost',
+                port: 3000
+            }),
+            livereload()
         ]
         
     }
