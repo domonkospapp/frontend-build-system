@@ -4,7 +4,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default [
     {
-        input: "src/ts/app.tsx",
+        input: "src/app.tsx",
         output: {
             dir: "public/js",
             format: "esm",
