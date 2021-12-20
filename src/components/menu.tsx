@@ -7,6 +7,7 @@ const Menu = () => (
 		<nav>
 			<Link href="/">Home </Link>
 			<Link href="/registration">Registration </Link>
+			<Link href="/login">Login </Link>
 		</nav>
 	</header>
 );
