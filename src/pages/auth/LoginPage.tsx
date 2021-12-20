@@ -1,17 +1,20 @@
 import { Fragment, h } from 'preact';
 import { useRef} from "preact/hooks";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { auth } from "../../utils/firebase"
 import { FormEvent } from "react";
+import { useAuth } from '../../utils/AuthContext';
 
 const LoginPage = ():JSX.Element => {
     const email = useRef<HTMLInputElement>(null!);
     const password = useRef<HTMLInputElement>(null!);
+    const { user, signin } = useAuth();
+
 
 
     const handleRegistration = (event:FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+        signin(email.current.value, password.current.value)
             .then(resetForm)
             .catch(onLoginError);
     };
@@ -28,6 +31,7 @@ const LoginPage = ():JSX.Element => {
     return (
         <Fragment>
             <h2>Login</h2>
+            
             <form onSubmit={handleRegistration}>
                 Email: <input type="text" ref={email} /><br />
                 Password: <input type="password" ref={password} /><br />

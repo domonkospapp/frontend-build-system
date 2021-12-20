@@ -1,17 +1,17 @@
 import { Fragment, h } from 'preact';
 import { useRef} from "preact/hooks";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../utils/firebase"
 import { FormEvent } from 'react';
+import { useAuth } from '../../utils/AuthContext';
 
 const RegistrationPage = ():JSX.Element => {
 
     const email = useRef<HTMLInputElement>(null!);
     const password = useRef<HTMLInputElement>(null!);
+    const { user, signup } = useAuth();
 
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+        signup(email.current.value, password.current.value)
             .then(resetForm)
             .catch(onRegistrationError);
     };
