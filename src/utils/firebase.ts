@@ -7,12 +7,12 @@ const firebaseConfig = {
   projectId: "researchmanager-64e3b",
   storageBucket: "researchmanager-64e3b.appspot.com",
   messagingSenderId: "69333235971",
-  appId: "1:69333235971:web:e88d1d9badb81ca8255136"
+  appId: "1:69333235971:web:e88d1d9badb81ca8255136",
 };
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
 
 export {
-    auth
+  auth,
 }

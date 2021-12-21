@@ -1,12 +1,15 @@
 import { h } from 'preact';
 
 type HomePageProps = {
-    name?: string;
+    name: string;
 }
-  
-const HomePage = ({ name = "User" }: HomePageProps) => {
-    console.log("Home page is working")
-    return <div>Hello {name}!</div>
-}
+
+const HomePage = ({ name = "User" }: HomePageProps) => (
+  <div>
+    Hello
+    {name}
+    !
+  </div>
+)
 
 export default HomePage
