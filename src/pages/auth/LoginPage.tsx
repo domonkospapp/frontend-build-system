@@ -1,8 +1,8 @@
 import { Fragment, h } from 'preact';
 import { useRef} from "preact/hooks";
 import { signOut } from "firebase/auth";
-import { auth } from "../../utils/firebase"
-import { useAuth } from '../../utils/AuthContext';
+import { auth } from "../../utils/firebase/firebase"
+import { useAuth } from '../../utils/auth/AuthContext';
 
 const LoginPage = ():h.JSX.Element => {
   const email = useRef<HTMLInputElement>(null!);

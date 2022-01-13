@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useAuth } from '../../utils/AuthContext';
+import { useAuth } from '../../utils/auth/AuthContext';
 
 const ProfilePage = ():h.JSX.Element => {
   const { user } = useAuth();

@@ -1,6 +1,6 @@
 import { Fragment, h } from 'preact';
 import { useRef} from "preact/hooks";
-import { useAuth } from '../../utils/AuthContext';
+import { useAuth } from '../../utils/auth/AuthContext';
 
 const RegistrationPage = ():h.JSX.Element => {
   const email = useRef<HTMLInputElement>(null!);
