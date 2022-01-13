@@ -6,7 +6,7 @@ interface IAuthContext {
     user: User|null;
     signin(email:string, password:string):Promise<any>;
     signup(email:string, password:string):Promise<any>;
-    signout: () => void;
+    signout(): void;
 }
 
 const useAuth = () => useContext(AuthContext);
