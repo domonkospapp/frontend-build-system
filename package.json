@@ -8,7 +8,7 @@
     "compile": "npx rollup --config rollup.config.js",
     "clean": "npx rimraf public/js/**/*",
     "build": "run-p clean compile",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
