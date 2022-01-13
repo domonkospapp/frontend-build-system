@@ -1,6 +1,6 @@
 import { Fragment, h } from 'preact';
 import { Link } from 'preact-router';
-import { useAuth } from '../utils/AuthContext';
+import { useAuth } from '../utils/auth/AuthContext';
 
 const Menu = () => {
   const { user, signout } = useAuth();
